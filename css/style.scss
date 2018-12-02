@@ -1,0 +1,111 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Gothic);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+/* Base
+------------------------------------------------------------*/
+html{
+  font-size: 80%;
+}
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:'Sawarabi+Gothic', $baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;  
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Header
+------------------------------------------------------------*/
+header{
+  background-image:url("../images/head.jpg");
+  height: 250px;
+  width:100%;
+  background-size:cover;
+  background-position:center center;
+}
+
+.news{
+  margin: 2rem 0;
+  text-align:center;
+}
+
+  container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);    // スキルボックスを縦に並べる
+  }
+  
+.box{
+  margin:1rem;
+  .title{
+    background-color:lightgray;
+    text-align:center;
+  }
+  .text{
+    background-color:gray;
+    padding:0.5rem 1rem;
+  }
+}
+
+footer{
+  margin-top:1rem;
+  padding-bottom:3rem;
+  width:100%;
+  background-color:lightgray;
+  text-align:center;
+
+  .text{
+    padding: 2rem 0;
+  }
+  button{
+    height:40px;
+    width:80%;
+    background-color:gray;
+    @include border-radius(10px,10px);
+  }
+}
+
+
+
+
+// desktop
+@media (min-width: 769px) {
+  
+  
+  /* Header
+  ------------------------------------------------------------*/
+  header{
+    height: 500px;
+  }
+
+
+  container{
+      @include flex-direction(row);     // スキルボックスを横に並べる
+
+    .box{
+      width: (100% / 3);    
+    }
+  }
+  footer{
+    button{
+      height:40px;
+      width:300px;
+    }
+  }  
+  
+}  

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Sawarabi+Gothic);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 80%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "Sawarabi+Gothic", "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fdfcf6; }
+
+a {
+  color: #14c0c9;
+  text-decoration: none; }
+  a:visited {
+    color: #0f949b; }
+  a:hover {
+    color: #0f949b; }
+  a:active {
+    color: #16d6e0; }
+
+/* Header
+------------------------------------------------------------*/
+header {
+  background-image: url("../images/head.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+.news {
+  margin: 2rem 0;
+  text-align: center; }
+
+container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+.box {
+  margin: 1rem; }
+  .box .title {
+    background-color: lightgray;
+    text-align: center; }
+  .box .text {
+    background-color: gray;
+    padding: 0.5rem 1rem; }
+
+footer {
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  background-color: lightgray;
+  text-align: center; }
+  footer .text {
+    padding: 2rem 0; }
+  footer button {
+    height: 40px;
+    width: 80%;
+    background-color: gray;
+    -moz-border-radius: 10px / 10px;
+    -webkit-border-radius: 10px 10px;
+    border-radius: 10px / 10px; }
+
+@media (min-width: 769px) {
+  /* Header
+  ------------------------------------------------------------*/
+  header {
+    height: 500px; }
+
+  container {
+    -webkit-flex-direction: row;
+    flex-direction: row; }
+    container .box {
+      width: 33.33333%; }
+
+  footer button {
+    height: 40px;
+    width: 300px; } }
+
+/*# sourceMappingURL=style.css.map */
